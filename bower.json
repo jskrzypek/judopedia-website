@@ -1,0 +1,10 @@
+{
+  "name": "judopedia-website",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "components-font-awesome": "~4.4.0",
+    "requirejs": "~2.1.20"
+  }
+}

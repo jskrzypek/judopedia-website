@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "name": "judopedia-website",
+  "org": "Judopedia",
+  "directories": {
+    "test": "test"
+  },
+  "bugs": {
+    "url": "https://github.com/reviling/Judopedia/issues"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "eslint": "^0.24.1",
+    "gulp": "^3.9.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-debug": "^2.0.1",
+    "gulp-eslint": "^1.0.0",
+    "gulp-html5-lint": "^1.0.1",
+    "gulp-jscs": "^2.0.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-scss-lint": "^0.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "html5-lint": "^0.2.5",
+    "jscs": "^2.0.0",
+    "karma": "^0.13.3",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.4.2",
+    "karma-growl-reporter": "^0.1.1",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.0.4",
+    "karma-nyan-reporter": "^0.2.1",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-requirejs": "^0.2.2",
+    "karma-sinon": "^1.0.4",
+    "mocha": "^2.2.5",
+    "phantomjs": "^1.9.17",
+    "requirejs": "^2.1.20",
+    "sinon": "^1.15.4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.mheducation.com:MHEducation/DLE-CLO-Bento.git"
+  }
+}

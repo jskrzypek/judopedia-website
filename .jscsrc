@@ -1,0 +1,19 @@
+{
+  "preset": "google",
+  "fileExtensions": [".js"],
+  "excludeFiles": [
+    "bower_components",
+    "node_modules"
+  ],
+
+  //"maxErrors": 100, // 50 is default
+
+  //
+  // Rule Settings
+  // These are our deviations from the Google standard
+  //
+  "disallowKeywordsOnNewLine"  : null, // Allows a newline between '}' and 'else'
+  "disallowMultipleLineBreaks" : null, // Allows multiple line breaks between code.
+  "disallowMultipleVarDecl"    : null, // Allows var a=1, b=2;
+  "maximumLineLength"          : null  // Allows lines longer than 80 characters
+}
