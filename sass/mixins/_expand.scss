@@ -1,0 +1,36 @@
+@mixin expand($n-columns: 1) {
+  @include expand-in-context($n-columns);
+}
+
+@mixin expand-in-context($shift: $columns of $container-columns) {
+  $n-columns: nth($shift, 1);
+  $parent-columns: container-shift($shift) !global;
+  $gutter-size: flex-gutter($parent-columns);
+  $width: -1 * $n-columns * (flex-grid(1, $parent-columns) + $gutter-size);
+
+  margin-left: $width;
+  margin-right: $width;
+
+  // Reset nesting context
+  $parent-columns: $grid-columns !global;
+}
+
+@mixin expand-min {
+  @include media($small-screen) {
+    @include expand(1);
+  }
+}
+
+@mixin expand-mid {
+  @include expand-min;
+  @include media($medium-screen) {
+    @include expand(2);
+  }
+}
+
+@mixin expand-max {
+  @include expand-min;
+  @include media($medium-screen) {
+    @include expand(3);
+  }
+}

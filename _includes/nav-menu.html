@@ -1,0 +1,41 @@
+{% assign urlSections = page.url | downcase | split: '/' %}
+
+<div class="navigation-menu-inner">
+    <div class="navigation-menu-inner-inner">
+        <div class="column toc-pre">
+            <div class="search-bar">
+                <form role="search">
+                    <input type="search" placeholder="Search" />
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <h2 class="toc-empty-header"></h2>
+            <ul>
+                <li value="3" class="feedback"><a {% if urlSections[1] == 'news'       %} class="active" {% endif %} href="/news/">News & Updates</a></li>
+                <li value="2"><a {% if urlSections[1] == 'contribute' %} class="active" {% endif %} href="/contribute/">Contribute / Feedback</a></li>
+                <li value="1"><a {% if urlSections[1] == 'preface'    %} class="active" {% endif %} href="/preface">Preface</a></li>
+            </ul>
+        </div>
+
+        <div class="column toc-content">
+            <h2>Content</h2>
+            <ul>
+                <li><a {% if urlSections[2] == 'techniques'     %} class="active" {% endif %} href="/content/techniques/">Techniques</a></li>
+                <li><a {% if urlSections[2] == 'forms'          %} class="active" {% endif %} href="/content/forms/">Forms</a></li>
+                <li><a {% if urlSections[2] == 'competition'    %} class="active" {% endif %} href="/content/competition/">Competition</a></li>
+                <li><a {% if urlSections[2] == 'history'        %} class="active" {% endif %} href="/content/history/">History</a></li>
+                <li><a {% if urlSections[2] == 'organizations'  %} class="active" {% endif %} href="/content/organizations/">Organizations</a></li>
+            </ul>
+        </div>
+
+        <div class="column toc-appendices">
+            <h2>Appendices</h2>
+            <ul>
+                <li><a {% if urlSections[2] == 'resources'       %} class="active" {% endif %} href="/appendices/resources/">Other Resources</a></li>
+                <li><a {% if urlSections[2] == 'faq'             %} class="active" {% endif %} href="/appendices/faq/">Judo FAQs</a></li>
+                <li><a {% if urlSections[2] == 'classification'  %} class="active" {% endif %} href="/appendices/classification/">Classification System</a></li>
+                <li><a {% if urlSections[2] == 'index'           %} class="active" {% endif %} href="/appendices/sitemap/">Site Map</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+main.homepage-photos {
+  .post {
+
+    h1 {
+      margin-bottom: .25em;
+
+      span {
+        font-weight: normal;
+        font-size: modular-scale(-1, 1em, $golden);
+        display: block;
+      }
+    }
+
+    small {
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    @include media($x-small-screen) {
+      .photo {
+        @include span-columns(4);
+      }
+
+      div {
+        @include span-columns(8);
+      }
+    }
+
+  }
+}

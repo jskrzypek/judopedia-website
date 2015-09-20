@@ -1,0 +1,98 @@
+footer {
+  width: 100%;
+  background: $footer-background;
+  font-family: $sans-serif;
+  line-height: $footer-height;
+
+  nav {
+    padding: 0 $gutter;
+    @include outer-container;
+  }
+
+  a {
+    color: $footer-link-color;
+
+    &:focus,
+    &:hover,
+    &.hover {
+      // There is no previous element CSS selector, so we accomplish this in JS using .hover class
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .github {
+    white-space: nowrap;
+    float: right;
+    font-style: normal;
+
+    .text {
+      display: none;
+      font-size: 0.8em;
+      line-height: normal; // prevents spacing issue with stickyFooter
+    }
+
+    #footer-repo-homepage-link,
+    #footer-feedback-link,
+    #footer-contribute-link {
+      &:before {
+        @include font-icon("octicons");
+      }
+    }
+
+    #footer-repo-homepage-link:before {
+        content: "\f00a";
+        font-size: 1.4em;
+        position: relative;
+        top: 1px;
+        margin: 0 .25em;
+    }
+
+    #footer-feedback-link:before {
+      content: "\f026";
+    }
+
+    #footer-contribute-link:before {
+      content: "\f05f";
+    }
+
+    @include media ($x-small-screen) {
+      .text {
+        display: inline-block;
+      }
+
+      #footer-repo-homepage-link:before {
+        margin: 0 .5em;
+      }
+
+      #footer-feedback-link,
+      #footer-contribute-link {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .footer-disclaimers {
+    span {
+      font-size: $small-font-size;
+      line-height: normal;
+      position: relative;
+      top: -1px;
+    }
+
+    &:before {
+      @include font-icon("CreativeCommons");
+
+      // c - creative commons
+      // b - attribution
+      // n - non-commercial
+      // a - share alike
+      content: "cbna";
+      position: relative;
+      top: 1px;
+    }
+
+  }
+
+}

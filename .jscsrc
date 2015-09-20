@@ -3,7 +3,9 @@
   "fileExtensions": [".js"],
   "excludeFiles": [
     "bower_components",
-    "node_modules"
+    "node_modules",
+    "gulpfile.js",
+    "js/ga.js"
   ],
 
   //"maxErrors": 100, // 50 is default

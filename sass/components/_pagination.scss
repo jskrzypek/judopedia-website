@@ -1,0 +1,122 @@
+.pagination {
+  @include span-columns(12);
+
+  $pagination-border-color: $base-border-color;
+  $pagination-border: 1px solid $pagination-border-color;
+  $pagination-background: lighten($pagination-border-color, 10);
+  $pagination-hover-background: lighten($pagination-background, 5);
+  $pagination-color: $base-font-color;
+
+  text-align: center;
+
+  padding-top: 2em;
+  margin-top: 1em;
+  border-top: 1px solid #ddd;
+
+  ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline;
+      list-style: none;
+    }
+
+    ul li {
+      display: none;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: inline;
+      }
+
+      @include media($large-screen) {
+        display: inline;
+      }
+    }
+
+    li {
+      span,
+      a {
+        background: $pagination-background;
+        border-radius: $base-border-radius;
+        border: $pagination-border;
+        color: $pagination-color;
+        outline: none;
+        padding: ($base-spacing * 3 / 10) ($gutter / 2) ($base-spacing / 5) ;
+
+      }
+
+      span {
+        background: $action-color;
+        color: #f6f6f6;
+        cursor: default;
+      }
+
+      a {
+        @include transition (all $base-duration ease-in-out);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          background: $pagination-hover-background;
+          color: $action-color;
+        }
+
+        &:active {
+          background: $pagination-background;
+        }
+
+      }
+
+    }
+
+    .page-previous,
+    .page-next {
+      span,
+      a {
+        &:after,
+        &:before {
+          display: none;
+
+          @include font-icon(FontAwesome);
+
+          font-size: .9em;
+          position: relative;
+          top: -.1em;
+        }
+      }
+
+      span {
+        background: shade($pagination-background, 5%);
+        color: $base-font-color-light;
+      }
+
+    }
+
+    .page-previous {
+      span, a {
+        &:before {
+          display: inline-block;
+          content: "\f060";
+          padding-right: $gutter / 3;
+        }
+      }
+    }
+    .page-next {
+      span, a {
+        &:after {
+          display: inline-block;
+          content: "\f061";
+          padding-left: $gutter / 3;
+        }
+      }
+    }
+  }
+
+}
+
+

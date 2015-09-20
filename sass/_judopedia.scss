@@ -1,0 +1,67 @@
+article,
+div.articleListing
+//section.post
+{
+
+  @include media($small-screen) {
+    @include span-columns(10);
+    @include shift(1);
+  }
+
+  @include media($medium-screen) {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+article.page,
+section.post {
+  @include media($small-screen) {
+    margin-top: 3.15em;
+  }
+}
+
+div.articleListing {
+  h1 {
+    margin-bottom: 0;
+  }
+  .date {
+    margin-bottom: 1em;
+  }
+}
+
+
+
+
+//body.homepage {
+//  article,
+//  div.articleListing {
+//
+//
+//    @include media($small-screen) {
+//      @include span-columns(10);
+//      @include shift(1);
+//    }
+//
+//
+//    @include media($medium-screen) {
+//      @include span-columns(6);
+//      @include shift(0);
+//    }
+//  }
+//
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

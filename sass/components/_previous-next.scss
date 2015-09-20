@@ -1,0 +1,274 @@
+.previousnext {
+  @include span-columns(12);
+  margin-top: $gutterVertical;
+
+  .previous,
+  .next {
+    display: block;
+    min-height: 1px; // This is so width and height css are respected.
+    margin-bottom: 1.5em;
+    position: relative;
+
+
+    .overlay {
+      width: 102%;
+      height: 102%;
+      position: absolute;
+      top: -1%;
+      left: -1%;
+      background: transparentize($base-background-color, .1);
+      text-align: center;
+      display: block;
+      color: shade($action-color, 25%);
+      font-size: 1.5em;
+      opacity: 0;
+
+      @include transition(opacity $base-duration $base-timing);
+
+      &:active {
+        opacity: 1;
+      }
+      @include media($medium-screen) {
+        font-size: 2em;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        line-height: 2em;
+        margin-top: -1em;
+        width: 100%;
+        left: 0;
+
+        &:before,
+        &:after {
+          display: none;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+
+          padding: .25em .35em;
+        }
+
+        &:before {
+          content: "\f0a8";
+        }
+
+        &:after {
+          content: "\f0a9";
+        }
+
+      }
+    }
+
+    &:hover,
+    &:active {
+      .overlay {
+        display: block;
+        opacity: 1;
+      }
+    }
+
+    @include media($small-screen) {
+      @include span-columns(6 of 12);
+
+    }
+    @include media($medium-screen) {
+      @include span-columns(5 of 12);
+    }
+  }
+
+  .previous {
+
+    .overlay {
+      span {
+        &:after {
+          display: inline-block;
+        }
+      }
+    }
+
+    @include media($small-screen) {
+      text-align: right;
+
+      .overlay {
+        span {
+          &:before {
+            display: inline-block;
+          }
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+
+      .read-more {
+        &:before {
+          display: inline;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+
+
+    }
+    @include media($medium-screen) {
+      @include shift(1);
+    }
+  }
+
+  .next {
+
+    .overlay {
+      span {
+        &:after {
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+
+  h1,
+  .view-all {
+    @include media($small-screen) {
+      @include span-columns(6 of 12);
+      height: 50px;
+    }
+
+    color: $base-font-color-strong;
+
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+
+
+    @include media($medium-screen-up) {
+      height: 62px;
+    }
+
+    span {
+      background: $base-background-color;
+      padding: 0;
+    }
+
+    &:before {
+      border-top: 1px solid #cacaca;
+      content: "";
+      margin: 0 auto;
+      position: absolute;
+      top: 41%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      //width: 95%;
+      z-index: -1;
+
+      @include media($small-screen-up) {
+        top: 28%;
+      }
+
+      @include media($medium-screen-up) {
+        top: 31.5%;
+      }
+
+    }
+  }
+
+  h1 {
+    font-family: $base-font-family;
+    font-size: modular-scale(1, 1em, $golden);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.6em;
+
+    span {
+      padding-right: modular-scale(-2, 1em, $golden);
+    }
+
+
+    @include media($small-screen) {
+      text-align: right;
+
+      span {
+        padding-right: 0;
+        padding-left: modular-scale(-2, 1em, $golden);
+      }
+    }
+
+    @include media($medium-screen) {
+      font-size: 2.1em;
+    }
+
+  }
+
+  .view-all {
+    margin-bottom: 1.5em;
+
+    &:before {
+      display: none;
+    }
+
+    @include media($small-screen) {
+      @include omega();
+
+      margin-bottom: 0;
+
+      &:before {
+        display: block;
+      }
+    }
+
+    a.read-more {
+      margin-left: 0;
+
+      @include media($small-screen) {
+        position: absolute;
+        top: 1.1em;
+      }
+
+      @include media($medium-screen-up) {
+        font-size: 1.1em;
+        top: 1.1em;
+      }
+    }
+  }
+
+  .metadata {
+    display: block;
+    margin-bottom: .9em;
+    font-size: 80%;
+    color: $base-font-color;
+  }
+
+  .metadata {
+    color: $base-font-color-light
+  }
+
+  h3 {
+    border: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+
+    small {
+      display: block;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+
+    &.date {
+      margin-bottom: 1em;
+      font-size: .8em;
+    }
+  }
+
+
+}

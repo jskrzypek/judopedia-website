@@ -1,0 +1,17 @@
+@mixin pull($direction, $n-columns: 1) {
+  @include pull-in-context($direction, $n-columns);
+}
+
+@mixin pull-in-context($direction, $shift: $columns of $container-columns) {
+  $n-columns: nth($shift, 1);
+  $parent-columns: container-shift($shift) !global;
+  $opposite-direction: get-opposite-direction($direction);
+  $gutter-size: flex-gutter($parent-columns);
+
+  float: unquote($direction);
+  margin-#{$direction}: -1 * $n-columns * (flex-grid(1, $parent-columns) + $gutter-size);
+  margin-#{$opposite-direction}: $gutter-size;
+
+  // Reset nesting context
+  $parent-columns: $grid-columns !global;
+}

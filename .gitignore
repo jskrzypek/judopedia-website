@@ -4,4 +4,4 @@
 *.DS_Store
 /stylesheets/*
 /.idea/*
-/._site/*
+/_site/*

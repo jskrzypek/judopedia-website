@@ -1,0 +1,200 @@
+$serif: 'Lusitana', serif;
+$serif-2: 'Merriweather', serif;
+$sans-serif: 'Merriweather Sans', sans-serif;
+
+// Typography
+$base-font-family: $serif-2;
+$heading-font-family: $serif;
+
+// Font Sizes
+$smaller-font-size: modular-scale(-2, 1em, $golden);
+$small-font-size:   modular-scale(-1, 1em, $golden);
+$base-font-size:    1em;
+$large-font-size:   modular-scale(1,  1em, $golden);
+$larger-font-size:  modular-scale(2,  1em, $golden);
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+
+$base-background-color: #F6F5F4;
+$base-font-color: #3B3A38;
+$base-font-color-strong: #31302E;
+$base-font-color-light: #ABA8A2;
+
+// Colors
+$blue: #477dca;
+$dark-gray: $base-font-color-strong; //#333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $blue;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+$base-transition: all $base-duration $base-timing;
+
+$gutterVertical: modular-scale(-1, 1em, $golden) !default;
+
+
+
+//$navigation-menu-bg-color: #7E80A1; //#dcdcdc;
+//$navigation-menu-title-color: #373737;
+//$navigation-menu-a-font-color: #767676;
+//$navigation-menu-a-font-color-hover: #373737;
+//$navigation-menu-a-bg-color-hover: #dcdcdc;
+//
+//$background-bg-color: #f6f6f6;
+//$background-font-color: #373737;
+//
+//$header-bg-color: #373737;
+//$header-font-color: #dcdcdc;
+//$header-font-color-hover: #f6f6f6;
+//$header-border-color: #767676;
+//
+//$header-button-bg-color: $header-bg-color;
+//$header-button-font-color: $header-font-color;
+//$header-button-bg-color-hover: #f6f6f6;
+//$header-button-font-color-hover: #373737;
+//$header-button-open-bg-color: $navigation-menu-bg-color;
+//$header-button-open-font-color: #373737;
+//$header-button-open-bg-color-hover: #f6f6f6;
+//$header-button-open-font-color-hover: #373737;
+//
+//$footer-bg-color: #dcdcdc;
+//$footer-font-color: #767676;
+
+$primary-color-dark: #A1602B;
+$primary-color-medium: #EE9B59;
+$primary-color-light: #FFB579;
+
+$secondary-color-dark: #1E8FA1;
+$secondary-color-light: #59D9EE;
+
+
+$navigation-menu-bg-color: #3B6896;
+$navigation-menu-title-color: #dcdcdc;
+$navigation-menu-font-color: #dcdcdc;
+$navigation-menu-a-font-color: #dcdcdc;
+$navigation-menu-a-font-color-hover: #f6f6f6;
+$navigation-menu-a-bg-color-hover: #dcdcdc;
+
+
+
+$header-bg-color: #16334F;//#374452;
+$header-font-color: #e6e5e4;
+$header-font-color-hover: #F6F5F4;
+$header-border-color: #23507D;
+
+$header-button-bg-color: $header-bg-color;
+$header-button-font-color: $header-font-color;
+$header-button-bg-color-hover: #487FB8;//$header-font-color-hover;
+$header-button-font-color-hover: $navigation-menu-a-font-color-hover; //$header-bg-color;
+$header-button-open-bg-color: $navigation-menu-bg-color;
+$header-button-open-font-color: $navigation-menu-title-color;
+$header-button-open-bg-color-hover: #487FB8;
+$header-button-open-font-color-hover: $navigation-menu-a-font-color-hover; //#373737;
+
+$footer-bg-color: #ECEBEA;
+$footer-font-color: #6D6D6C;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$fontDirectory : '/vendors/fonts';
+
+$font-family-logo : ChunkFive, sans-serif;
+
+// These are the font sizes you should use around the site.
+// NOTE: USE THESE SPARINGLY!!!
+$font-size-1  : 6.5px;
+$font-size-2  : 8.6px;
+$font-size-3  : 10.8px;
+$font-size-4  : 14px;
+$font-size-5  : 17.2px;
+$font-size-6  : 22.6px;
+$font-size-7  : 28px;
+$font-size-8  : 36.6px;
+$font-size-9  : 45.2px;
+$font-size-10 : 59.2px;
+$font-size-11 : 73.2px;
+$font-size-12 : 95.8px;
+$font-size-13 : 118.4px;
+$font-size-14 : 155px;
+
+// These are the default values you should use.
+// NOTE: If you are not using these, you better have a good reason.
+$font-size-xsmall : $font-size-2;
+$font-size-small  : $font-size-3;
+$font-size-normal : $font-size-4;
+$font-size-medium : $font-size-5;
+$font-size-large  : $font-size-6;
+$font-size-xlarge : $font-size-7;
+
+$font-size-logo : $font-size-10;
+
+
+$footer-height: 40px;
+$header-height: 60px;
+
+$color-background: #f6f6f6;
+
+
+
+
+
+
+
+$base-box-shadow: 0 .5px 9px 0 transparentize($header-bg-color, .5);
+$base-box-shadow-light: 0 .5px 9px 0 transparentize($header-bg-color, .85);
+
+
+
+$footer-background: $footer-bg-color;
+$footer-color: $footer-font-color;
+$footer-link-color: transparentize($footer-color, 0.6);
+
+//TODO turn in to a mixin
+// from bootstrap. For WAI - screen readers
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

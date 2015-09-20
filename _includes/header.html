@@ -1,0 +1,18 @@
+<header role="banner">
+  <div class="navigation-wrapper">
+    <nav>
+      <a id="navigation-menu-btn"></a>
+      <a href="/" class="logo">{{ site.title }}</a>
+      <div class="search-bar">
+        <form role="search">
+          <input type="search" placeholder="Search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<nav id="navigation-menu">
+  {% include nav-menu.html %}
+</nav>

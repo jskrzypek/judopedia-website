@@ -1,7 +1,7 @@
 var allTestFiles = [];
 var modules = [];
 var TEST_REGEXP = /(spec|test)\.js$/i;
-var SRC_REGEXP = /app\/webroot\/js\//;
+var SRC_REGEXP = /js\//;
 var JS_REGEXP = /\.js$/;
 
 var jsToModule = function(path) {
@@ -21,10 +21,10 @@ Object.keys(window.__karma__.files).forEach(function(file) {
   }
 });
 
-var startTest = function () {
+var startTest = function() {
   //loading all the existing requirejs src modules before
   //triggering the karma test
-  require(modules, function () {
+  require(modules, function() {
     window.__karma__.start();
   });
 };

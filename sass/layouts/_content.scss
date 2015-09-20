@@ -1,0 +1,25 @@
+body {
+  min-width: 20em;
+  background: $base-background-color;
+  color: $base-font-color;
+}
+
+#main-inner {
+  //padding: em($header-height) 0 em($footer-height);
+  padding: $header-height 0 $footer-height;
+}
+
+main {
+  @include outer-container();
+  padding: $gutterVertical $gutter
+}
+
+
+
+
+
+
+
+
+
+

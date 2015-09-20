@@ -1,0 +1,51 @@
+---
+layout: generic
+---
+<div class="articleListing">
+    {% for post in paginator.posts %}
+    <section class="post">
+        <h1><a href="{{ BASE_PATH }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+
+        <p class="date">{{ post.date | date: "%Y %B %d" }}</p>
+
+        <p>
+            {{ post.excerpt | remove_images | strip_html }}
+            <a class="read-more" href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
+        </p>
+    </section>
+    {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    <ul>
+        <li class="page-previous">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Prev</a>
+            {% else %}
+            <span>Prev</span>
+            {% endif %}
+        </li>
+        <li>
+            <ul>
+                {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                <li><span>{{ page }}<span class="sr-only"> (current page)</span></span></li>
+                {% elsif page == 1 %}
+                <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+                {% else %}
+                <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        <li class="page-next">
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
+            {% else %}
+            <span>Next</span>
+            {% endif %}
+        </li>
+    </ul>
+</div>
+{% endif %}

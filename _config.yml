@@ -1,0 +1,35 @@
+# Site settings
+title: Judopedia
+email: administrator@judopedia.com
+description: Like an encyclopedia... but for Judo
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://judopedia.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: null
+
+paginate: 2
+paginate_path: "/news/page:num/"
+
+sass:
+  sass_dir: sass
+  sourcemap: :true
+
+exclude: [
+  node_modules,
+  .bowerrc,
+  .eslintignore,
+  .eslintrc,
+  .jscsrc,
+  .scss-lint.yml,
+  about.md,
+  bower.json,
+  Gemfile,
+  Gemfile.lock,
+  gulpfile.js,
+  karma.conf.js,
+  LICENSE,
+  package.json,
+  README.md
+]

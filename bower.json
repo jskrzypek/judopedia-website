@@ -3,8 +3,15 @@
   "version": "0.0.1",
   "private": "true",
   "dependencies": {
-    "foundation": "zurb/bower-foundation",
+    "bitters": "~1.1.0",
+    "bourbon": "~4.2.4",
     "components-font-awesome": "~4.4.0",
-    "requirejs": "~2.1.20"
+    "fastclick": "~1.0.6",
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3",
+    "neat": "~1.7.2",
+    "normalize-css": "normalize.css#~3.0.3",
+    "requirejs": "~2.1.20",
+    "octicons": "*"
   }
 }

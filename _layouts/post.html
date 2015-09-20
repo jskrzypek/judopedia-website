@@ -1,0 +1,56 @@
+---
+layout: generic
+---
+<article class="post">
+  <p class="type"><a href="/news/">News</a>{% if page.type %}: {{ page.type }}{% endif %}</p>
+
+  <h1>{{ page.title }}</h1>
+
+  <p class="lead">{{ page.excerpt }}</p>
+
+  <p class="date">{{ page.date | date: "%Y %B %d" }}</p>
+
+  {{ content }}
+
+  <p class="author">{{ page.author }}</p>
+
+  <hr class="article-end">
+</article>
+
+<!-- TODO move to _includes -->
+<nav class="previousnext">
+
+  <h1><span>More News</span></h1>
+  <div class="view-all"><a href="/news/" class="read-more">Browse all News & Updates</a>&nbsp;</div>
+
+  <div class="previous">
+    {% if page.previous %}
+
+    <h3>
+      <small>Previous</small>
+      <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+    </h3>
+    <p class="date">{{ page.previous.date | date: "%Y %B %d" }}</p>
+    <p class="post-excerpt">
+      {{ page.previous.excerpt | markdownify | remove_images | strip_html }}
+    </p>
+    <p><a class="read-more" href="{{ page.previous.url }}">Read previous</a></p>
+    <a class="overlay" href="{{ page.previous.url }}"><span>Read previous</span></a>
+    {% endif %}
+  </div>
+
+  <div class="next">
+    {% if page.next %}
+    <h3>
+      <small>Next</small>
+      <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+    </h3>
+    <p class="date">{{ page.next.date | date: "%Y %B %d" }}</p>
+    <p class="post-excerpt">
+      {{ page.next.excerpt | markdownify | remove_images | strip_html }}
+    </p>
+    <p><a class="read-more" href="{{ page.next.url }}">Read next</a></p>
+    <a class="overlay" href="{{ page.next.url }}"><span>Read next</span></a>
+    {% endif %}
+  </div>
+</nav>
