@@ -34,9 +34,20 @@ exclude: [
   README.md
 ]
 
-gems: [
-  "jekyll/scholar"
-]
+gems:
+  - "jekyll/scholar"
+  - "jekyll/assets"
+
+assets:
+  compress:
+    css: false | true | default - development: false, production: true
+  cache: false | directory | default: .asset-cache
+  prefix: "/_assets"
+  assets:
+    - "bundle.css"
+  digest: true
+  sources:
+    - "_assets/bower"
 
 scholar:
   style: apa
