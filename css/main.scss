@@ -3,41 +3,41 @@
 ---
 @charset "utf-8";
 
-@import
-"../bower_components/normalize-css/normalize.css",
-"../bower_components/components-font-awesome/css/font-awesome.css",
-"../bower_components/bourbon/app/assets/stylesheets/bourbon",
-"../bower_components/neat/app/assets/stylesheets/neat",
-"../bower_components/neat/app/assets/stylesheets/neat-helpers",
 
-"mixins/expand",
-"mixins/font-face",
-"mixins/pull",
-"mixins/font-icon",
 
-"globals/variables",
-"globals/fonts",
+@import "../bower_components/normalize-css/normalize.css";
+@import "../bower_components/components-font-awesome/css/font-awesome.css";
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+@import "../bower_components/neat/app/assets/stylesheets/neat-helpers";
 
-"layouts/stickyFooter",
+@import "mixins/expand";
+@import "mixins/font-face";
+@import "mixins/pull";
+@import "mixins/font-icon";
 
-"bitters/grid-settings",
-"bitters/buttons",
-"bitters/forms",
-"bitters/lists",
-"bitters/tables",
-"bitters/typography",
+@import "globals/variables";
+@import "globals/fonts";
 
-"components/syntax-highlighting",
-"components/previous-next",
-"components/pagination",
+@import "layouts/stickyFooter";
 
-"layouts/header",
-"layouts/footer",
-"layouts/content",
+@import "bitters/grid-settings";
+@import "bitters/buttons";
+@import "bitters/forms";
+@import "bitters/lists";
+@import "bitters/tables";
+@import "bitters/typography";
 
-"sections/homepage",
-"sections/homepage-photos",
-"sections/appendix_index",
+@import "components/syntax-highlighting";
+@import "components/previous-next";
+@import "components/pagination";
 
-"judopedia";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/content";
 
+@import "sections/homepage";
+@import "sections/homepage-photos";
+@import "sections/appendix_index";
+
+@import "judopedia";
