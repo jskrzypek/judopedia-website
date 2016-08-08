@@ -40,8 +40,7 @@ gems:
 
 assets:
   compress:
-    css: false | true | default - development: false, production: true
-  cache: false | directory | default: .asset-cache
+    css: false
   prefix: "/_assets"
   assets:
     - "bundle.css"
