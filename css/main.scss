@@ -5,11 +5,11 @@
 
 
 
-@import "../bower_components/normalize-css/normalize.css";
-@import "../bower_components/components-font-awesome/css/font-awesome.css";
-@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
-@import "../bower_components/neat/app/assets/stylesheets/neat";
-@import "../bower_components/neat/app/assets/stylesheets/neat-helpers";
+@import "../_assets/bower/normalize-css/normalize.css";
+@import "../_assets/bower/components-font-awesome/css/font-awesome.css";
+@import "../_assets/bower/bourbon/app/assets/stylesheets/bourbon";
+@import "../_assets/bower/neat/app/assets/stylesheets/neat";
+@import "../_assets/bower/neat/app/assets/stylesheets/neat-helpers";
 
 @import "mixins/expand";
 @import "mixins/font-face";
